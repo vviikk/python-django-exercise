@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "./app"
+    ],
+    "python.analysis.extraPaths": [
+        "./app"
+    ],
+    "python.pythonPath": "venv/bin/python",
+    "python.linting.lintOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 250,
+}
