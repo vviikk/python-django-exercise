@@ -7,6 +7,11 @@
     ],
     "python.pythonPath": "venv/bin/python",
     "python.linting.lintOnSave": true,
+    "python.linting.pylintArgs": [
+        "--rcfile",
+        "${workspaceFolder}\\app\\.flake8"
+    ],
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 250,
+    "python.linting.flake8Enabled": true,
 }

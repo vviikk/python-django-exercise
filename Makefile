@@ -26,21 +26,30 @@ migration:
 migrate:
 	python ${PWD}/app/manage.py migrate
 
-superuser:
-	python ${PWD}/app/manage.py createsuperuser
-
-test:
+test-local:
 	pushd app; python manage.py test && flake8; popd;
 
-test-docker:
+test:
 	docker-compose run app sh -c "python manage.py test && flake8"
 
 push:
 	git push origin master
 
-deploy:
+build:
 	docker-compose build
+
+up:
+	docker-compose up
+
+up-d:
 	docker-compose up -d
 
 down:
 	docker-compose down
+
+# USER MANAGEMENT
+superuser:
+	docker-compose run app sh -c "python manage.py createsuperuser"
+
+superuser-local:
+	python ${PWD}/app/manage.py createsuperuser
